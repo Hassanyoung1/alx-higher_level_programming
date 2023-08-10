@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+
 def uppercase(str):
+
+    rslt = ""
     for char in str:
-        if 'a' <= char <= 'z':
-            print("{}".format(chr(ord(char) - 32)), end="")
+        if ord('a') <= ord(char) <= ord('z'):
+            rslt += chr(ord(char) - ord('a') + ord('A'))
         else:
-            print("{}".format(char), end="")
+            rslt += char
+    print("{}".format(rslt))
