@@ -13,7 +13,7 @@ if __name__ == "__main__":
     elif number_of_argv > 2:
         print(number_of_argv - 1, "arguments:")
        
-    for num in range(1, number_of_argv):
-        print("{}: {}".format(num, argv[num])) 
+        for num in range(1, number_of_argv):
+            print("{}: {}".format(num, argv[num])) 
         
 
