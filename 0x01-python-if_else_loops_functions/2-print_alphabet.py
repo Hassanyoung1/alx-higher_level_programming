@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for i in range(097, 122):
-	print(i)
+for char  in range(97, 123):
+	print(chr(char), end='')
