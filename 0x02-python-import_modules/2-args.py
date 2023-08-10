@@ -15,5 +15,3 @@ if __name__ == "__main__":
        
         for num in range(1, number_of_argv):
             print("{}: {}".format(num, argv[num])) 
-        
-
