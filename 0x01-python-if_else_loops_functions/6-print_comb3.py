@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-for tens_digit in range(10):
-    for ones_digit in range(tens_digit + 1, 10):
-        if tens_digit != ones_digit:
-            if tens_digit < 9:
-                print("{:d}{:d}, ".format(tens_digit, ones_digit), end="")
+for tens in range(10):
+    for ones in range(tens + 1, 10):
+        if tens != 0 or ones != 0:
+            if tens == 8 and ones == 9:
+                break
             else:
-                print("{:d}{:d}".format(tens_digit, ones_digit))
+                print("{:02}, ".format(tens * 10 + ones), end="")
+print("{:02}".format(89))
