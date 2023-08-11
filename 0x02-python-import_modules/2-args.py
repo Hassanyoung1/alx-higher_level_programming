@@ -10,6 +10,7 @@ if __name__ == "__main__":
     elif number_of_argv == 2:
         print(number_of_argv - 1, "argument:")
         print("{}: {}".format(number_of_argv - 1, argv[1]))
+
     elif number_of_argv > 2:
         print(number_of_argv - 1, "arguments:")
 
