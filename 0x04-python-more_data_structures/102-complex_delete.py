@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def complex_delete(a_dictionary, value):
     if value in a_dictionary.values():
         # Create a new dictionary to store non-matching key-value pairs
