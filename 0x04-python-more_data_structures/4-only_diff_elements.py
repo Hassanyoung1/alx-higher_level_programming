@@ -9,4 +9,4 @@ def only_diff_elements(set_1, set_2):
     for element in set_2:
         if element != set_1:
             common_set.add(element)
-        return common_set
+    return common_set
