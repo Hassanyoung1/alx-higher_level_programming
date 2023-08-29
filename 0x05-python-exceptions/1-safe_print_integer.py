@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ function """
+
+
 def safe_print_integer(value):
     try:
         """ Try to format and print the value as an integer """
