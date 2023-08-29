@@ -8,6 +8,6 @@ def safe_print_integer(value):
         print("{:d}".format(value))
         """ Print an integer succesfully """
         return True
-    except (TypeError, ValueError:
+    except (TypeError, ValueError):
         """ failed to print an integer (value is not an integer)"""
         return False
