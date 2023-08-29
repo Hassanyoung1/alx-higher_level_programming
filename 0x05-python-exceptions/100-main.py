@@ -16,9 +16,3 @@ value = "School"
 has_been_print = safe_print_integer_err(value)
 if not has_been_print:
     print("{} is not an integer".format(value))
-
-guillaume@ubuntu:~/0x05$ ./100-main.py
-89
--89
-Exception: Unknown format code 'd' for object of type 'str'
-School is not an integer
