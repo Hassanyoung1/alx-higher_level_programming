@@ -11,16 +11,16 @@ def safe_print_list_integers(my_list=[], x=0):
     Returns:
         int: The real number of integers printed.
     """
-    printed_integers = 0  # To keep track of the number of integers printed
+    printed_integers = 0  # To keep track of the number of integers ped
 
     try:
         for item in my_list:
-            if printed_integers == x:  # Stop printing when required number of integers are printed
+            if printed_integers == x:  # Stop printing
                 break
 
             try:
                 formatted_value = "{:d}".format(item)
-                print(formatted_value, end="")  # Print the formatted value on the same line
+                print(formatted_value, end="")
                 printed_integers += 1
             except (TypeError, ValueError):
                 pass  # If the item is not an integer, silently skip it
@@ -28,4 +28,4 @@ def safe_print_list_integers(my_list=[], x=0):
         print()  # Print a new line after printing the integers
         return printed_integers
     except IndexError:
-        return printed_integers  # Return the count of printed integers even if an exception occurred
+        return printed_integers  # Return the count of printed integers
