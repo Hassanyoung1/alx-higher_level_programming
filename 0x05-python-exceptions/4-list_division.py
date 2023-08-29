@@ -19,7 +19,8 @@ def list_division(my_list_1, my_list_2, list_length):
             a = my_list_1[i] if i < len(my_list_1) else 0
             b = my_list_2[i] if i < len(my_list_2) else 0
 
-            if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+            if not (isinstance(a, (int, float))
+                    and isinstance(b, (int, float))):
                 print("wrong type")
                 result_list.append(0)
             elif b == 0:
