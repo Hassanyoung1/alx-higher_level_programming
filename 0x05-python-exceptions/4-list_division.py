@@ -1,36 +1,25 @@
 #!/usr/bin/python3
 
 def list_division(my_list_1, my_list_2, list_length):
-    """
-    Divide two lists element by element.
-
-    Args:
-        my_list_1 (list): The first list.
-        my_list_2 (list): The second list.
-        list_length (int): The desired length of the resulting list.
-
-    Returns:
-        list: A new list with all divisions.
-    """
-    result_list = []
+    new_list = []
 
     for i in range(list_length):
         try:
-            a = my_list_1[i] if i < len(my_list_1) else 0
-            b = my_list_2[i] if i < len(my_list_2) else 0
+            a = my_list_1[i]
+            b = my_list_2[i]
 
-            if not (isinstance(a, (int, float))
-                    and isinstance(b, (int, float))):
-                print("wrong type")
-                result_list.append(0)
-            elif b == 0:
+            try:
+                division = a / b
+            except ZeroDivisionError:
                 print("division by 0")
-                result_list.append(0)
-            else:
-                result = a / b
-                result_list.append(result)
+                division = 0
+            except TypeError:
+                print("wrong type")
+                division = 0
         except IndexError:
             print("out of range")
-            result_list.append(0)
+            division = 0
+        finally:
+            new_list.append(division)
 
-    return result_list
+    return new_list
