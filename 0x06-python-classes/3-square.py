@@ -4,7 +4,6 @@
 This is an empty square class
 """
 
-
 class Square:
     """This is an empty square class"""
 
