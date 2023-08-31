@@ -2,6 +2,7 @@
 
 """ Defines a square class """
 
+
 class Square:
     """
     This class defines a square by its size and position.
@@ -65,8 +66,3 @@ class Square:
         row = ' ' * self.position[0] + '#' * self.size
         for _ in range(self.size):
             print(row)
-
-# Example usage
-if __name__ == "__main__":
-    my_square = Square(4, (1, 2))
-    my_square.my_print()
