@@ -56,5 +56,3 @@ def text_indentation(text):
 
     """ Print the formatted text """
     print(formatted_text)
-
-
