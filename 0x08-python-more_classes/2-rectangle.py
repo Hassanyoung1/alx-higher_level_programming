@@ -14,13 +14,13 @@ class Rectangle:
     Public methods:
     - width(self): Getter method for width.
     - width(self, value): Setter method for width.
-        - Width must be an integer, otherwise, raise a TypeError with the message 'width must be an integer'.
-        - If width is less than 0, raise a ValueError with the message 'width must be >= 0'.
+        - Width must be an integer, otherwise, raise a TypeError
+        - If width is less than 0, raise a ValueError
 
     - height(self): Getter method for height.
     - height(self, value): Setter method for height.
-        - Height must be an integer, otherwise, raise a TypeError with the message 'height must be an integer'.
-        - If height is less than 0, raise a ValueError with the message 'height must be >= 0'.
+        - Height must be an integer, otherwise, raise a TypeError
+        - If height is less than 0, raise a ValueError
 
     Instantiation with optional width and height:
     - __init__(self, width=0, height=0)
