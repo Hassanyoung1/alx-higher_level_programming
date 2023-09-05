@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 """ Define a Class """
 
 
@@ -92,7 +91,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return a string representation of the rectangle with the character(s) stored in print_symbol."""
+        """Return a string representation of the stored in print_symbol."""
         if self.__width == 0 or self.__height == 0:
             return ""
         rectangle_str = ""
