@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+
+""" Define a Class """
+
+
 class Rectangle:
     """
     This class defines a rectangle.
@@ -7,9 +12,9 @@ class Rectangle:
     - __height: Height of the rectangle.
 
     Public class attributes:
-    - number_of_instances: Initialized to 0, incremented during each new instance instantiation,
+    - number_of_instances: Initialized to 0, incremented
     and decremented during each instance deletion.
-    - print_symbol: Initialized to '#', used as the symbol for string representation, can be any type.
+    - print_symbol: Initialized to '#', used as the symbol for
 
     Public methods:
     - width(self): Getter method for width.
@@ -27,15 +32,15 @@ class Rectangle:
     - perimeter(self): Returns the perimeter of the rectangle.
         - If width or height is equal to 0, perimeter has to be equal to 0.
 
-    - __str__(self): Returns a string representation of the rectangle with the character(s) stored in print_symbol.
+    - __str__(self): Returns a string representation of the rectangle with the
         - If width or height is equal to 0, return an empty string.
 
-    - __repr__(self): Returns a string representation of the rectangle for eval().
+    - __repr__(self): Returns a string representation of the
 
-    - __del__(self): Prints the message "Bye rectangle..." when an instance of Rectangle is deleted.
+    - __del__(self): Prints the message "Bye rectangle..." when an instance o
 
     Static methods:
-    - bigger_or_equal(rect_1, rect_2): Returns the biggest rectangle based on the area.
+    - bigger_or_equal(rect_1, rect_2): Returns the biggest rectangle based on t
         - rect_1 must be an instance of Rectangle, otherwise raise a TypeError.
         - rect_2 must be an instance of Rectangle, otherwise raise a TypeError.
         - Returns rect_1 if both have the same area value.
