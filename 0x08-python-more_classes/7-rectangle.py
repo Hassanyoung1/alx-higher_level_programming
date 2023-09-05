@@ -13,9 +13,9 @@ class Rectangle:
     - __height: Height of the rectangle.
 
     Public class attributes:
-    - number_of_instances: Initialized to 0, incremented during each new instance instantiation,
+    - number_of_instances: Initialized to 0, incremented
     and decremented during each instance deletion.
-    - print_symbol: Initialized to '#', used as the symbol for string representation, can be any type.
+    - print_symbol: Initialized to '#', used as the symbol
 
     Public methods:
     - width(self): Getter method for width.
@@ -33,12 +33,12 @@ class Rectangle:
     - perimeter(self): Returns the perimeter of the rectangle.
         - If width or height is equal to 0, perimeter has to be equal to 0.
 
-    - __str__(self): Returns a string representation of the rectangle with the character(s) stored in print_symbol.
+    - __str__(self): Returns a string representation of the rectangle
         - If width or height is equal to 0, return an empty string.
 
-    - __repr__(self): Returns a string representation of the rectangle for eval().
+    - __repr__(self): Returns a string representation of the rectangle
 
-    - __del__(self): Prints the message "Bye rectangle..." when an instance of Rectangle is deleted.
+    - __del__(self): Prints the message "Bye rectangle..." when a
 
     Instantiation with optional width and height:
     - __init__(self, width=0, height=0)
