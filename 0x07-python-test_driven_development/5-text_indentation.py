@@ -9,7 +9,8 @@ This module contains a function for text indentation.
 
 def text_indentation(text):
     """
-    Formats the given text by adding two new lines after '.', '?', and ':' characters.
+    Formats the given text by adding two new lines after '.', '
+    ?', and ':' characters.
 
     Args:
         text (str): The input text to be formatted.
@@ -18,7 +19,8 @@ def text_indentation(text):
         TypeError: If the input 'text' is not a string.
 
     Returns:
-        None: This function does not return a value. It prints the formatted text.
+        None: This function does not return a value.
+        It prints the formatted text.
 
     """
     """ Check if the input is a string """
@@ -37,7 +39,7 @@ def text_indentation(text):
         """ Add the character to the result string """
         result += char
 
-        """ Check if the character is one of the specified punctuation marks """
+        """ Check if the char is one of the specified punctuation marks """
         if char in (".", "?", ":"):
             """ Add two newlines after the punctuation """
             result += "\n\n"
