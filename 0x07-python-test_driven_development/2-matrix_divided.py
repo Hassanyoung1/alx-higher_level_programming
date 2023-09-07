@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Declare maxtrx divided """
+
 
 def matrix_divided(matrix, div):
     """
