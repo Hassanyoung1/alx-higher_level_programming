@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Declare print square """
+
 
 def print_square(size):
     """
@@ -8,7 +10,8 @@ def print_square(size):
         size (int): The size of the square's side.
 
     Raises:
-        TypeError: If size is not an integer or is less than 0, with the appropriate message.
+        TypeError: If size is not an integer or is less than 0,
+        with the appropriate message.
 
     Returns:
         None
