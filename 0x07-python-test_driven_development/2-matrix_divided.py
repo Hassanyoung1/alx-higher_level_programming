@@ -22,7 +22,6 @@ def matrix_divided(matrix, div):
             if the rows of the matrix have different sizes,
             or if the divisor is not a number.
         ZeroDivisionError: If the divisor is equal to 0.
-
     """
     if not all(
         all(isinstance(num, (int, float)) for num in row)
