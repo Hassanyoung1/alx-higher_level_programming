@@ -1,0 +1,36 @@
+
+Import modules:
+
+>>> MyList = __import__('1-my_list').MyList
+
+Checking the len
+	>>> len1 = __import__('1-my_list').__doc__
+	>>> print(len(len1) > 1)
+	True
+	>>> len2 = __import__('1-my_list').MyList.__doc__
+	>>> print(len(len2) > 1)
+	True
+
+checking the correct output:
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+checking the incorrect output:
+>>> print(my)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'my' is not defined
+>>> print(my_list())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'MyList' object is not callable
