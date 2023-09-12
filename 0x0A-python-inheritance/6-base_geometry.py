@@ -3,11 +3,6 @@
 """ Declare a class """
 
 
-class AreaNotImplemented(Exception):
-    """Custom exception to indicate that the area() method
-    is not implemented."""
-    pass
-
 class BaseGeometry:
     """
     This is the BaseGeometry class docstring.
@@ -20,4 +15,3 @@ class BaseGeometry:
         Subclasses should override this method to calculate the area.
         """
         raise Exception("area() is not implemented")
-
