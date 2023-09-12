@@ -2,10 +2,12 @@
 
 """ Declare a class """
 
+
 class MyList(list):
     """
     A custom list class that inherits from the built-in list class.
-    This class provides an additional method for printing the list in ascending order.
+    This class provides an additional method for printing the
+    list in ascending order.
 
     Attributes:
         Inherits all attributes and methods from the list class.
