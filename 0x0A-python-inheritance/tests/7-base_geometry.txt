@@ -8,6 +8,12 @@ checking len:
     >>> len2 = __import__('7-base_geometry').BaseGeometry.__doc__
     >>> print(len(len2) > 1)
     True
+ 	>>> len3 = __import__('7-base_geometry').BaseGeometry.area.__doc__
+    >>> print(len(len3) > 1)
+    True
+	>>> len4 = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+    >>> print(len(len4) > 1)
+    True
 
 checking the correct output:
     >>> bg = BaseGeometry()
