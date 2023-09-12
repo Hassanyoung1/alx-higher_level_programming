@@ -50,7 +50,7 @@ class Rectangle(BaseGeometry):
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
         """
-        self.__width = width
-        self.__height = height
         self.integer_validator("height", height)
         self.integer_validator("width", width)
+        self.__width = width
+        self.__height = height
