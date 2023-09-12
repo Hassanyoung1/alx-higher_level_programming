@@ -26,8 +26,21 @@ class Rectangle(BaseGeometry):
         super().integer_validator("width", self.__width)
 
     def area(self):
+        """
+        Initialize area method
+        Args:
+            self
+        Return:
+            width and height
+        """
         return self.__width * self.__height
 
     def __str__(self):
+        """
+        Initialize area method
+        Args:
+            self
+        Return:
+             an informal str representation
+        """
         return f"[Rectangle] {self.__width}/{self.__height}"
-
