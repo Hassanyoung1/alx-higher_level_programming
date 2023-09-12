@@ -2,8 +2,10 @@
 
 """ Declare a class """
 
+
 class AreaNotImplemented(Exception):
-    """Custom exception to indicate that the area() method is not implemented."""
+    """Custom exception to indicate that the area() method
+    is not implemented."""
     pass
 
 class BaseGeometry:
