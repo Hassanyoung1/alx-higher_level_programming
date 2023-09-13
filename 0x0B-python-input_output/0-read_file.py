@@ -2,6 +2,7 @@
 
 """ Declare the function prototype """
 
+
 def read_file(filename=""):
     """
     Read a text file (UTF-8 encoded) and print its content to stdout.
