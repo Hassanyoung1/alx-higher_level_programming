@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+""" Declare a function prototype """
+
+
 def write_file(filename="", text=""):
     """
     Write text to a file with the specified filename.
