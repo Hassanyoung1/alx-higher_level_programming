@@ -19,11 +19,23 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """
         Returns a dictionary representation of the Student object.
+
+        Args:
+            attrs (list, optional): A list of attribute names
+            to include in the dictionary.
+                If None, all attributes are included.
 
         Returns:
             dict: A dictionary containing the student's attributes.
         """
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        else:
+            student_dict = {}
+            for attr in attrs:
+                if hasattr(self, attr):
+                    student_dict[attr] = getattr(self, attr)
+            return student_dict
