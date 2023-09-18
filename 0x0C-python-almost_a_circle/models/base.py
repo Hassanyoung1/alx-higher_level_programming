@@ -112,7 +112,7 @@ class Base:
         Returns:
             cls: A new instance of the class with the specified attributes.
         """
-        dummy = cls(1, 2)  # Create a dummy instance
+        dummy = cls(2, 2) # Create a dummy instance
         dummy.update(**dictionary)  # Update attributes from the dictionary
         return dummy
 
