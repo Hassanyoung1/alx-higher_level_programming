@@ -57,8 +57,7 @@ class Base:
             dictionaries to be converted.
 
         Returns:
-            str: A JSON string representing the
-            list of dictionaries.
+            str: A JSON string representing the list of dictionaries.
         """
         if type(list_dictionaries) is None or list_dictionaries is []:
             return "[]"

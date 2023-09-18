@@ -8,6 +8,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+
     """A class representing a square, derived from Rectangle.
 
     Args:
@@ -69,4 +70,4 @@ class Square(Rectangle):
                 'size': self.size,
                 'x': self.x,
                 'y': self.y
-            }
+                }
