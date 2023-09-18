@@ -112,9 +112,12 @@ class Base:
         Returns:
             cls: A new instance of the class with the specified attributes.
         """
-        dummy = cls(1, 1) # Create a dummy instance
-        dummy.update(**dictionary)  # Update attributes from the dictionary
-        return dummy
+        dummy = cls(1, 1)
+        if dummy is None:
+            return "[]"
+        else:      # Create a dummy instance
+            dummy.update(**dictionary)  # Update attributes from the dictionary
+            return dummy
 
     @classmethod
     def load_from_file(cls):
