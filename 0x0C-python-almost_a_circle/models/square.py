@@ -27,10 +27,18 @@ class Square(Rectangle):
         id (int): The unique identifier of the square.
 
     Methods:
-        __str__(): Returns a string representation of the square.
-        update(*args, **kwargs): Updates the square's attributes
-        using either positional arguments or keyword arguments.
-        to_dictionary(): Returns a dictionary representation of the square.
+        __init__(self, size, x=0, y=0, id=None):
+            Initializes a new Square instance.
+
+        __str__(self):
+            Returns a string representation of the square.
+
+        update(self, *args, **kwargs):
+            Updates the square's attributes
+            using either positional arguments or keyword arguments.
+
+        to_dictionary(self):
+            Returns a dictionary representation of the square.
 
     Note:
         The Square class inherits from the Rectangle class and
@@ -42,20 +50,24 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Return a string representation of the square."""
         a = f"[{__class__.__name__}] ({self.id}) "
         b = f"{self.x}/{self.y} - {self.width}"
         return a + b
 
     @property
     def size(self):
+        """Getter method for the size attribute."""
         return self.width
 
     @size.setter
     def size(self, value):
+        """Setter method for the size attribute."""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Update the square's attributes using either positional arguments or keyword arguments."""
         if len(args) > 0:
             arg = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
@@ -65,6 +77,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Convert the square's attributes to a dictionary."""
         return {
                 'id': self.id,
                 'size': self.size,
