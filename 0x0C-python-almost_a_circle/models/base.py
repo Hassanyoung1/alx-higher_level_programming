@@ -95,10 +95,10 @@ class Base:
         Returns:
             list: A list of dictionaries represented by the JSON string.
         """
-        if json_string is None or json_string is "":
+        if json_string is None or json_string == "":
             return []
         else:
-            return json.loads(json_string)
+            return json.loads(json_string):
 
     @classmethod
     def create(cls, **dictionary):
