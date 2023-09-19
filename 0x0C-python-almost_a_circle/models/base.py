@@ -117,10 +117,10 @@ class Base:
         elif cls.__name__ == "Square":
             dummy = cls(1)
         else:
-             raise ValueError("Unsupported class")
-
+            raise ValueError("Unsupported class")
         dummy.update(**dictionary)
         return dummy
+
     @classmethod
     def load_from_file(cls):
         """
