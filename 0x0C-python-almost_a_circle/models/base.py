@@ -5,6 +5,7 @@
 
 import json
 from os.path import exists
+import csv
 
 """ Declare Class """
 
@@ -141,3 +142,54 @@ class Base:
                 loads = cls.from_json_string(read_file)
                 instance = [cls.create(**items) for items in loads]
             return instance
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serialize objects to a CSV file.
+
+        Args:
+            cls (class): The class itself.
+            list_objs (list): A list of objects to be serialized.
+
+        Returns:
+            None
+        """
+        file_name = cls.__name__ + ".csv"
+
+        with open(file_name, 'w', newline='') as csv_file:
+            dict_objs = [each_obj.to_dictionary() for each_obj in list_objs]
+
+            # Extract fieldnames from the first object's dictionary
+            if dict_objs:
+                fieldnames = list(dict_objs[0].keys())
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                writer.writeheader()
+
+                for each_dict in dict_objs:
+                    writer.writerow(each_dict)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize objects from a CSV file.
+
+        Returns:
+            list: A list of object instances created from the CSV data.
+        """
+        file_name = cls.__name__ + ".csv"
+        instance_list = []
+
+        with open(file_name, newline='') as csv_file:
+            reader = csv.DictReader(csv_file)
+
+            for row in reader:
+                if cls.__name__ == "Rectangle":
+                    fields = ['id', 'width', 'height', 'x', 'y']
+                elif cls.__name__ == "Square":
+                    fields = ['id', 'size', 'x', 'y']
+
+                instance = {field: int(row[field]) for field in fields}
+                instance_list.append(instance)
+
+        return [cls.create(**each_dict) for each_dict in instance_list]
