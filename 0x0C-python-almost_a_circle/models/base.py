@@ -114,7 +114,7 @@ class Base:
         """
         dummy = cls(1, 1)
         if dummy is None:
-            return cls(1)
+            return cls(0)
         else:      # Create a dummy instance
             dummy.update(**dictionary)  # Update attributes from the dictionary
             return dummy
