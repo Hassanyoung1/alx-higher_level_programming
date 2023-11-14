@@ -15,4 +15,3 @@ const factorial = (n) => {
 const input = +process.argv[2];
 
 console.log(factorial(input));
-
