@@ -9,7 +9,7 @@ class Rectangle {
   /**
    * Export class rectangle.
    */
-  constructor(w, h) {
+  constructor (w, h) {
     /**
      * Defining class constructor.
      * width: Initialize the instance attribute width with the value of w.
@@ -21,7 +21,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       let line = '';
       for (let j = 0; j < this.width; j++) {
@@ -31,19 +31,16 @@ class Rectangle {
     }
   }
 
-  rotate() {
-      
+  rotate () {
     const temp = this.width;
     this.width = this.height;
     this.height = temp;
   }
 
-
-  double() {
+  double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
 }
 
 module.exports = Rectangle;
-
