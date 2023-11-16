@@ -20,6 +20,9 @@ class Rectangle {
       this.height = h;
     }
   }
+    /*Create an instance method called print() 
+    * that prints the rectangle using the character X
+    */
     print() {
       for (let i = 0; i < this.height; i++) {
         let line = '';
