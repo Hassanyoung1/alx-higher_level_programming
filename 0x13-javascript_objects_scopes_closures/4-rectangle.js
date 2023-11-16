@@ -21,6 +21,9 @@ class Rectangle {
     }
   }
 
+  /** create an instance method called print()
+    * that prints the rectangle using the character X
+    * */
   print () {
     for (let i = 0; i < this.height; i++) {
       let line = '';
@@ -31,13 +34,23 @@ class Rectangle {
     }
   }
 
+  /** Create an instance method called rotate() that
+    * exchanges the width and the height of the rectangle
+    */
   rotate () {
+    // swap
     const temp = this.width;
     this.width = this.height;
     this.height = temp;
   }
 
+  /*
+   * Create an instance method called double() that multiples
+   * the width and the height of the rectangle by 2
+   */
+
   double () {
+    // multiply each
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
