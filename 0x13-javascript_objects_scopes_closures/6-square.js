@@ -12,9 +12,9 @@ class Square extends Rectangle {
   }
 
   /* Create an instance method called
-*charPrint(c) that prints
-*the rectangle using the character c
-*/
+    *charPrint(c) that prints
+    *the rectangle using the character c
+    */
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
