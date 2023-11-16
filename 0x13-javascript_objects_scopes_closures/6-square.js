@@ -10,7 +10,7 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-/* Create an instance method calledcharPrint(c) that printsthe rectangle using the character c */
+
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
