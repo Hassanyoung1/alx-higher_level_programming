@@ -1,4 +1,4 @@
-#!/usr/bin/node 
+#!/usr/bin/node
 /**
  * An empty class Rectangle that define a rectangle
  *
