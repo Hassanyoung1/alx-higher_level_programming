@@ -7,21 +7,25 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """
+    checking the length of the argurment
+    """
+
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(sys.argv[0]))
+        print("Usage: {} < username > <password >
+              < database > <state_name >".format(sys.argv[0]))
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:5]
 
-
     """ Connect to MySQL database """
     db = MySQLdb.connect(
-            host="localhost",
-            user=username,
-            passwd=password,
-            db=database,
-            port=3306
-            )
+        host="localhost",
+        user=username,
+        passwd=password,
+        db=database,
+        port=3306
+    )
 
     """ Create a cursor object using cursor() method """
     cursor = db.cursor()
