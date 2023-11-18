@@ -19,6 +19,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:5]
+
 try:
     """ Connect to MySQL database """
     db = MySQLdb.connect(
