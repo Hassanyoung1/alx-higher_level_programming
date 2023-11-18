@@ -9,9 +9,8 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    """
-    checking the length of the argurment
-    """
+
+    """checking the length of the argurment"""
 
     if len(sys.argv) != 5:
         print(
