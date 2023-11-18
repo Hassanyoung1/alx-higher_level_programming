@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     """ Execute the SQL query """
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'
-                   ORDER BY id ASC ")
+            ORDER BY id ASC ")
 
     """ Fetch all the rows using fetchall() method """
     data = cursor.fetchall()
