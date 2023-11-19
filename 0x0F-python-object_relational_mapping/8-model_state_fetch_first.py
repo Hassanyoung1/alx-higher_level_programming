@@ -35,3 +35,5 @@ if __name__ == "__main__":
         row = result.first()
         if row:
             print("{}: {}".format(row[0], row[1]))
+        else:
+            print("Nothing")
