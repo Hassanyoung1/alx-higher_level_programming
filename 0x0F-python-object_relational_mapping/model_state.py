@@ -16,9 +16,11 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
-    The State class represents a state with an 'id' (primary key) and 'name' column.
+    The State class represents a state with an 'id' (primary key) and 'name'
+    column.
 
     Attributes:
         id (int): The primary key for the state.
