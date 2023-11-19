@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 a script that lists all State objects that
 contain the letter a from the database
@@ -17,7 +18,6 @@ if __name__ == "__main__":
         print("Usage: ./7-model_state_fetch_all.py <username> <password>\
                 <database_name>")
         sys.exit(1)
-
 
     """ Create SQLAlchemy engine """
     engine = create_engine(
