@@ -44,18 +44,13 @@ if __name__ == "__main__":
     cursor.execute(query, (argv[4],))
 
     """ Fetch all the rows using fetchall() method"""
-
     data = cursor.fetchall()
 
     """  Print the result """
-
-    for row in data:
-        print("{}, {}".format(row[0], row[1]))
-
+    city_string = ", ".join(row[1] for row in data)
+    print(city_string)
     """ Close the cursor """
-
     cursor.close()
 
     """ Close the database connection """
-
     db.close()
