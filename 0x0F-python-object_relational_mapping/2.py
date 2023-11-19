@@ -6,7 +6,7 @@ in the states table of hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
 
@@ -20,7 +20,6 @@ if __name__ == "__main__":
 
     username, password, database, state_name = sys.argv[1:5]
 
-try:
     """ Connect to MySQL database """
     db = MySQLdb.connect(
         host="localhost",
@@ -43,10 +42,9 @@ try:
     """ Print the result """
     for row in data:
         print(row)
-except MySQLdb.Error as e:
+MySQLdb.Error as e:
     print(f"MySQL Error: {e}")
 
-finally:
     """ Close the cursor """
     cursor.close()
 
