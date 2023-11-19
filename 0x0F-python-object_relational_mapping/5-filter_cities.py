@@ -10,7 +10,8 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    # Checking the length of the argument
+    """ Checking the length of the argument """
+
     if len(sys.argv) != 5:
         print(
             "Usage: {} <username> <password> <database> <state_name>".format(
@@ -19,7 +20,8 @@ if __name__ == "__main__":
 
     username, password, database, state_name = sys.argv[1:5]
 
-    # Connect to MySQL database
+    """ Connect to MySQL database """
+
     db = MySQLdb.connect(
         host="localhost",
         user=username,
@@ -28,10 +30,12 @@ if __name__ == "__main__":
         port=3306
     )
 
-    # Create a cursor object using cursor() method
+    """ Create a cursor object using cursor() method """
+
     cursor = db.cursor()
 
-    # Execute the SQL query
+    """  Execute the SQL query """
+
     query = "SELECT cities.id, cities.name, states.name " \
             "FROM cities INNER JOIN states ON cities.state_id=states.id " \
             "WHERE states.name = %s " \
@@ -39,15 +43,19 @@ if __name__ == "__main__":
 
     cursor.execute(query, (argv[4],))
 
-    # Fetch all the rows using fetchall() method
+    """ Fetch all the rows using fetchall() method"""
+
     data = cursor.fetchall()
 
-    # Print the result
+    """  Print the result """
+
     for row in data:
         print("{}, {}".format(row[0], row[1]))
 
-    # Close the cursor
+    """ Close the cursor """
+
     cursor.close()
 
-    # Close the database connection
+    """ Close the database connection """
+
     db.close()
