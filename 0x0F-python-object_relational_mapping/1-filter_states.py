@@ -24,7 +24,8 @@ if __name__ == "__main__":
 
     """ Print the result """
     for row in data:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     """ Close the cursor """
     cursor.close()
 
