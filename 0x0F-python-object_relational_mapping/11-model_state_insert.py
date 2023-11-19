@@ -14,7 +14,8 @@ if __name__ == "__main__":
     Parse command-line arguments
     """
     if len(sys.argv) != 5:
-        print("Usage: ./11-model_state_insert.py <username> <password> <database_name> <state_name>")
+        print("Usage: ./11-model_state_insert.py <username> <password>\
+              <database_name> <state_name>")
         sys.exit(1)
 
     """
