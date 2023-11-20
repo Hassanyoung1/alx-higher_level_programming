@@ -1,51 +1,46 @@
 #!/usr/bin/python3
 """
-Script that prints the State object with the name passed as an argument
-from the database hbtn_0e_6_usa.
+This script adds the State object “Louisiana” to the database hbtn_0e_6_usa
+It takes 3 arguments: mysql username, mysql password, and database name.
 """
 
-import sys
-from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
 if __name__ == "__main__":
-    """
-    Parse command-line arguments
-    """
-    if len(sys.argv) != 5:
-        print("Usage: ./11-model_state_insert.py <username> <password>\
-              <database_name> <state_name>")
-        sys.exit(1)
+    import sys
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import Session
+    from model_state import Base, State
 
-    """
-    Create SQLAlchemy engine
-    """
+    # Check if the number of arguments is correct
+    if len(sys.argv) != 4:
+        print('Usage: argv[0] <username> <password> <database>',
+              file=sys.stderr)
+        exit()
+
+    # Create a SQLAlchemy engine that provides a source of database
+    # connectivity
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-            sys.argv[1], sys.argv[2], sys.argv[3]),
+            sys.argv[1],  # username
+            sys.argv[2],  # password
+            sys.argv[3]   # database name
+        ),
         pool_pre_ping=True
     )
 
-    """
-    Create session
-    """
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    # Create all tables in the engine ("Base.metadata.create_all" is akin to
+    # "CREATE TABLE" statement in raw SQL)
+    Base.metadata.create_all(engine)
 
-    """
-    Query the database for the State with the given name
-    """
-    state_name = sys.argv[4]
-    result = session.query(State).filter_by(name=state_name).first()
+    # Create a new session
+    session = Session(engine)
 
-    """
-    If the state is not found, add it to the database
-    """
-    if not result:
-        new_state = State(name=state_name)
-        session.add(new_state)
-        session.commit()
-        print(new_state.id)
-    else:
-        print(result.id)
+    # Query the State table
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    session.commit()
+
+    states_t = session.query(State).filter_by(name="Louisiana").first()
+    print(f"{states_t.id}")
+
+    # Close the session
+    session.close()
