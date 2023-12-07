@@ -38,4 +38,3 @@ if __name__ == "__main__":
             print("Not a valid JSON")
     else:
         print(f"Error: {response.status_code}")
-
