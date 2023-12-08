@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+"""
+ a Python script that takes 2 arguments in order to solve this challenge.
+"""
+
+if __name__ == "__main__":
+    import requests
+    from sys import argv
+    repo = argv[1]
+    owner_name = argv[2]
+    req = requests.get(f"https://developer.github.com/v3/repos/{owner_name}/{repo}/commits")
+    commits = req.json()
+    try:
+        for i in range(10):
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
+
+
