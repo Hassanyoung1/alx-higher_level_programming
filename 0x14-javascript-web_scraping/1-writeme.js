@@ -17,11 +17,10 @@ if (!filePath) {
   process.exit(1);
 }
 
-
 /*  write iny the file content asynchronously */
 fs.writeFile(filePath, content, 'utf-8', (error) => {
   /* Print the content or an error message */
   if (error) {
-  console.log(error);
+    console.log(error);
   }
 });
