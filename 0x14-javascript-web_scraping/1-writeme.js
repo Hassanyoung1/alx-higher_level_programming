@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /**
  * File write Script
  *
