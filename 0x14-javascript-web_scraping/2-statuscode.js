@@ -7,7 +7,8 @@
  */
 
 /* Get the URL from the command-line arguments */
-const request = require("request");
+
+const request = require('request');
 const url = process.argv[2];
 
 /* Check if a URL is provided */
