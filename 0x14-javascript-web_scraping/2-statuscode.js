@@ -12,6 +12,7 @@ const request = require('request');
 const url = process.argv[2];
 
 /* Check if a URL is provided */
+
 if (!url) {
   console.error('Specify the URL');
   process.exit(1);
