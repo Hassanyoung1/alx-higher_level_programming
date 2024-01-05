@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 /**
  * File Write Script
  *
@@ -22,7 +22,6 @@ request(url, function (error, response) {
   if (error) {
     console.error(`Error: ${error.message}`);
   } else {
-    console.log(`HTTP status code: ${response.statusCode}`);
+    console.log(`code: ${response.statusCode}`);
   }
 });
-
