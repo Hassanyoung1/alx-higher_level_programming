@@ -18,7 +18,7 @@ if (!url) {
 
 /* Make an HTTP GET request to the specified URL */
 request(url, function (error, response) {
-  /*  Check for errors and log the HTTP status code */
+/*  Check for errors and log the HTTP status code */
   if (error) {
     console.error(`Error: ${error.message}`);
   } else {
