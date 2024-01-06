@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
- * This script queries the Star Wars API (https://swapi-api.alx-tools.com/api/films/) 
+ * This script queries the Star Wars API (https://swapi-api.alx-tools.com/api/films/)
  * and prints the number of movies in which the character “Wedge Antilles” is present.
  */
 
