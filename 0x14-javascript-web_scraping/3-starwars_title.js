@@ -31,7 +31,7 @@ request(apiUrl, function (error, response, body) {
     const movieData = JSON.parse(body);
 
     /* Check if the movie title is available */
-     if (movieData.title) {
+    if (movieData.title) {
       console.log(`${movieData.title}`);
     } else {
       console.log(`No movie found with Episode ${movieId}`);
