@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 /**
  * Wedge Antilles Movie Count Script
  *
