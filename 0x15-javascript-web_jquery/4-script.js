@@ -1,3 +1,3 @@
 $('DIV#toogle_header').on('click', () => {
-    $('header').toogleClass('red' + 'green');   
+    $('header').toogleClass('red green');   
 });
